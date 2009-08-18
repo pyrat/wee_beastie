@@ -11,5 +11,8 @@ module ForumsHelper
     return false unless logged_in? && forum.recent_topic
     return forum.recent_topic.replied_at > ((session[:forums] && session[:forums][forum.id]) || 3.days.ago) # was: last_active.  TODO: Could implement something to look at the user
   end
+  
+    
+  
 
 end

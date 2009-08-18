@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title><%= "#{h @page_title} - " if @page_title %><%= 'Beast'[:beast_title] %></title>
-  <%= stylesheet_link_tag 'display', :plugin => 'savage_beast' %>
-  <%= javascript_include_tag "lowpro", "application", :cache => 'beast', :plugin => 'savage_beast' %>
-	<%# Assumption: If you're a rails project, you already have your own version of these, and don't need the SB version %>
+  <title><%= "#{h @page_title} - " if @page_title %> FORUMS</title>
+  <%= stylesheet_link_tag 'display' %>
+  <%= javascript_include_tag "lowpro", "application", :cache => 'beast'%>
+
 	<%= javascript_include_tag "prototype", "effects" %>
 <% unless @feed_icons.blank? -%>
   <% @feed_icons.each do |feed| -%>
@@ -20,8 +20,8 @@
 
 <div id="header">
 	<ul id="nav">
-		<li><%= link_to 'Forums'[:forums_title], forums_path, :rel => 'home' %></li>
-		<li><%= link_to 'Users'[:users_title], users_path %></li>
+		<li><%= link_to 'Forums', forums_path, :rel => 'home' %></li>
+		<li><%= link_to 'Users', users_path %></li>
 		<li id="search">
 		<% form_tag search_all_posts_url, :method => :get do -%>			
 			<%= text_field_tag :q, params[:q], :size => 15, :id => :search_box %>
