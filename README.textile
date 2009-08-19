@@ -1,8 +1,9 @@
+!http://farm3.static.flickr.com/2492/3836426712_79c9abc1e5.jpg!
+
 WeeBeastie
 ==========
 
 Rewrite of SavageBeast to work with Rails 2.3.x as a rails engine.
-
 
 
 Copyright (c) 2009 Alastair Brunton, released under the MIT license
