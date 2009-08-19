@@ -20,6 +20,7 @@ module WeeBeastie::AuthenticationSystem
     #User.update_all ['last_seen_at = ?', Time.now.utc], ['id = ?', current_user.id]
     #current_user.last_seen_at = Time.now.utc
   end
+  
 
   def login_required
     #attempt_login
@@ -47,6 +48,6 @@ module WeeBeastie::AuthenticationSystem
   end
 
   def admin?
-    #logged_in? && current_user.admin?
+    logged_in? && current_user.admin?
   end
 end

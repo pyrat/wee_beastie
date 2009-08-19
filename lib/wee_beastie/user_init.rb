@@ -16,12 +16,12 @@ module WeeBeastie
 
         #implement in your user model
         def display_name
-          "implement display_name in your user model"
+          self.login
         end
 
         #implement in your user model
         def admin?
-          false
+          true
         end
 
         def moderator_of?(forum)
