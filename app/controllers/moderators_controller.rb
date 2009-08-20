@@ -1,5 +1,6 @@
 class ModeratorsController < ApplicationController
   before_filter :login_required
+  helper :beastie
   layout 'forums'
 
   def destroy

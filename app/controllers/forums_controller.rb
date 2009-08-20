@@ -5,7 +5,6 @@ class ForumsController < ApplicationController
   
   
   helper :beastie, :forums
-  
   layout 'forums'
   
   cache_sweeper :posts_sweeper, :only => [:create, :update, :destroy]

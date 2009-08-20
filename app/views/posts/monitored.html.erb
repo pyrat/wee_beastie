@@ -1,8 +1,8 @@
-<% @page_title = "Posts that {user} is monitoring"[:posts_user_is_monitoring, h(@user.display_name)] -%>
+<% @page_title = "Posts that #{h(@user.display_name)} is monitoring" -%>
 
 <% content_for :right do %>
 
-<h4><%= "{name}'s Monitored Topics"[:users_monitored_topics, link_to(h(@user.display_name), user_path(@user))] %></h4>
+<h4><%= "#{link_to(h(@user.display_name), user_path(@user))}'s Monitored Topics" %></h4>
 <ul class="flat">
 <% @user.monitored_topics.find(:all, :limit => 25).each do |topic| %>
   <li><%= link_to topic.title, forum_topic_path(topic.forum_id, topic) %></li>
@@ -13,8 +13,8 @@
 
 <h1><%= @page_title %></h1>
 <p class="subtitle">
-  <%= feed_icon_tag @page_title, formatted_monitored_posts_path(:user_id => @user, :format => 'rss') %>
-  <%= '{count} post(s) found'[(count=@posts.total_entries)==1 ? :post_count_found : :posts_count_found, number_with_delimiter(count)] %>
+  <%= feed_icon_tag @page_title, monitored_posts_path(:user_id => @user, :format => 'rss') %>
+  <%= number_with_delimiter(@posts.total_entries)] %> posts found.
 </p>
 
 <%= will_paginate @posts %>
@@ -36,10 +36,10 @@
 
     <%= avatar_for post.user %>
     <span class="fn"><%= link_to truncate(h(post.user.display_name), :length => 15), user_path(post.user), :class => (post.user == @posts.first.user ? "admin" : nil) %></span>
-    <span class="posts"><%= '{count} post(s)'[(count=post.user.posts.size)==1 ? :post_count : :posts_count, number_with_delimiter(count)] %></span>
+    <span class="posts"><%= '{number_with_delimiter(post.user.posts.size)} post(s)'%></span>
   </td>
   <td class="body entry-content">
-    <p class="topic"><%= 'Topic'[:topic_title] %>: <%= link_to h(post.topic_title), forum_topic_path(post.forum_id, post.topic_id) %></p>
+    <p class="topic">Topic: <%= link_to h(post.topic_title), forum_topic_path(post.forum_id, post.topic_id) %></p>
     
     <%= post.body_html %>
   </td>

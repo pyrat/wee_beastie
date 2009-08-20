@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   #caches_formatted_page :rss, :index, :monitored
   cache_sweeper :posts_sweeper, :only => [:create, :update, :destroy]
   
+  helper :beastie, :posts
   layout 'forums'
 
   def index

@@ -4,7 +4,7 @@ xml.rss "version" => "2.0",
   'xmlns:opensearch' => "http://a9.com/-/spec/opensearch/1.1/",
   'xmlns:atom'       => "http://www.w3.org/2005/Atom" do
   xml.channel do
-    xml.title "{search_posts_title} | Beast"[:posts_feed_title, search_posts_title]
+    xml.title "{search_posts_title} | Forum"
     xml.link "http://#{request.host_with_port}#{search_posts_path}"
     xml.language "en-us"[:feed_language]
     xml.ttl "60"
