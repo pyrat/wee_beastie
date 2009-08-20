@@ -25,16 +25,12 @@
   <td class="author vcard">
     <div class="date">
       <abbr class="updated" title="<%= post.created_at.xmlschema %>">
-      <% if post.created_at > Time.now.utc-24.hours%>
-      <%= time_ago_in_words(post.created_at).sub(/about /, '') %>
-      <% else %>
-      <%= post.created_at.strftime("%b %e, %Y"[:date_format])%>
-      <% end %>
+        <%= post.created_at.strftime("%e %B %Y at %I:%M%p")%>
       </abbr>
     </div>
 
     <%= avatar_for @users[post.user_id] %>
-    <span class="fn"><%= link_to truncate(h(@users[post.user_id].display_name), 15), user_path(post.user_id) %></span>
+    <span class="fn"><%= link_to truncate(h(@users[post.user_id].display_name), :length => 15), user_path(post.user_id) %></span>
     <span class="posts"><%= '{count} posts'[(count=@users[post.user_id].posts.size)==1 ? :post_count : :posts_count, number_with_delimiter(count)] %></span>
   </td>
   <td class="body entry-content">

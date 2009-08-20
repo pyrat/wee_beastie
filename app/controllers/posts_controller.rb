@@ -7,6 +7,8 @@ class PostsController < ApplicationController
   # sure what analogous place to put it in this plugin.  It don't work in the init.rb
   #caches_formatted_page :rss, :index, :monitored
   cache_sweeper :posts_sweeper, :only => [:create, :update, :destroy]
+  
+  layout 'forums'
 
   def index
     conditions = []

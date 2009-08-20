@@ -14,8 +14,8 @@ class Forum < ActiveRecord::Base
   has_many :recent_topics, :class_name => 'Topic', :order => 'replied_at DESC'
   has_one  :recent_topic,  :class_name => 'Topic', :order => 'replied_at DESC'
 
-  has_many :posts,     :order => "#{Post.table_name}.created_at DESC", :dependent => :delete_all
-  has_one  :recent_post, :order => "#{Post.table_name}.created_at DESC", :class_name => 'Post'
+  has_many :posts, :order => "created_at DESC", :dependent => :destroy
+  
 
   format_attribute :description
   
@@ -23,4 +23,9 @@ class Forum < ActiveRecord::Base
   def self.find_ordered(options = {})
     find :all, options.update(:order => 'position')
   end
+  
+  def recent_post
+    posts.any? ? posts.first : nil
+  end
+  
 end

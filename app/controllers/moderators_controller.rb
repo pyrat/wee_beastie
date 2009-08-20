@@ -1,5 +1,6 @@
 class ModeratorsController < ApplicationController
   before_filter :login_required
+  layout 'forums'
 
   def destroy
     Moderatorship.delete_all ['id = ?', params[:id]]

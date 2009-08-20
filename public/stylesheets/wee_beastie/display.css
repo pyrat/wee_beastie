@@ -257,7 +257,7 @@ ul.talking li span
 
 ul.flat li
 {
-	background:url(../images/wee_beastie/small_circle.gif) no-repeat 5px 6px;
+	background:url(../../images/wee_beastie/small_circle.gif) no-repeat 5px 6px;
 	padding-left:15px;
 }
 ul.ways li span
@@ -520,7 +520,7 @@ label
 
 .photo
 {
-	background:#aaa url(../images/wee_beastie/clearbits/smile.gif) no-repeat 8px 8px;
+	background:#aaa url(../../images/wee_beastie/clearbits/smile.gif) no-repeat 8px 8px;
 }
 
 .smallutils
@@ -848,7 +848,7 @@ p.online {margin-bottom:0;}
 img.icon
 {
 	background:#696;
-	background-image: url(../images/wee_beastie/clearbits/bg_rounded.gif);
+	background-image: url(../../images/wee_beastie/clearbits/bg_rounded.gif);
 	background-repeat: no-repeat;
 	vertical-align: bottom;
 }
@@ -867,7 +867,7 @@ img.green { background-color:#0c0;}
 
 div.editbox
 {
-	background:url(../images/wee_beastie/reply_background.png);
+	background:url(../../images/wee_beastie/reply_background.png);
 	border:2px solid #333;
 	border-width:2px 0;
 	position:fixed;

@@ -1,9 +1,18 @@
 !http://farm3.static.flickr.com/2492/3836426712_79c9abc1e5.jpg!
 
-WeeBeastie
-==========
+h1. Wee Beastie
 
 Rewrite of SavageBeast to work with Rails 2.3.x as a rails engine.
 
+h2. Install
 
-Copyright (c) 2009 Alastair Brunton, released under the MIT license
+* script/plugin install
+* rake wee_beastie:sync_migrations
+* rake wee_beastie:sync_public
+* rake db:migrate
+* config.cache_classes = true (environment.rb) - means restarts, sorry!
+* config.active_record.default_timezone = :utc
+
+
+
+*Copyright (c) 2009 Alastair Brunton, released under the MIT license*

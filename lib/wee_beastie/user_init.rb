@@ -14,7 +14,7 @@ module WeeBeastie
         has_many :monitorships
         has_many :monitored_topics, :through => :monitorships, :conditions => ["#{Monitorship.table_name}.active = ?", true], :order => "#{Topic.table_name}.replied_at desc", :source => :topic
 
-        #implement in your user model
+        #i mplement in your user model
         def display_name
           self.login
         end

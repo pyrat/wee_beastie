@@ -10,7 +10,7 @@
 	<%= javascript_include_tag "prototype", "effects" %>
 <% unless @feed_icons.blank? -%>
   <% @feed_icons.each do |feed| -%>
-  <%= auto_discovery_link_tag :rss, feed[:url], :title => "Subscribe to '#{feed[:title]}'" %>
+  <%# auto_discovery_link_tag :rss, feed[:url], :title => "Subscribe to '#{feed[:title]}'" %>
   <% end -%>
 <% end -%>
   <%= head_extras %>
@@ -30,6 +30,6 @@
 		</li>
 		<li class="login"><%= beast_user_link %></li>		
   </ul>
-  <h1><%= link_to 'Beast'[:beast_title], forums_path %></h1>
+  <h1><%= link_to 'Forums', forums_path %></h1>
 </div>
 			
