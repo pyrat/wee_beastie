@@ -8,7 +8,7 @@ xml.rss "version" => "2.0",
     xml.link "http://#{request.host_with_port}#{search_posts_path}"
     xml.language "en-us"[:feed_language]
     xml.ttl "60"
-    xml.tag! "atom:link", :rel => 'search', :type => 'application/opensearchdescription+xml', :href => "http://#{request.host_with_port+request.relative_url_root}/open_search.xml"
+    xml.tag! "atom:link", :rel => 'search', :type => 'application/opensearchdescription+xml', :href => "http://#{request.host_with_port + ActionController::Base.relative_url_root.to_s}/open_search.xml"
     unless params[:q].blank?
     	xml.tag! "opensearch:totalResults", @posts.total_entries
     	xml.tag! "opensearch:startIndex", (((params[:page] || 1).to_i - 1) * @posts.per_page)

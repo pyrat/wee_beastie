@@ -21,7 +21,7 @@ module WeeBeastie::AuthenticationSystem
     current_user.update_attribute(:last_seen_at, Time.now.utc)
   end
 
-  def authorized?()
+  def authorized?
     true
     # in your code, redirect to an appropriate page if not an admin
   end
