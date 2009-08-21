@@ -9,6 +9,7 @@ h2. Install
 * script/plugin install git://github.com/pyrat/wee_beastie.git
 * rake wee_beastie:sync_migrations
 * rake wee_beastie:sync_public
+* rake wee_beastie:install_plugins
 * rake db:migrate
 * config.cache_classes = true (environment.rb) - means restarts, sorry!
 * config.active_record.default_timezone = :utc
