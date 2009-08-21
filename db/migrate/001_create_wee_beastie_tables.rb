@@ -57,6 +57,7 @@ class CreateWeeBeastieTables < ActiveRecord::Migration
 
     add_column :users, :posts_count, :integer, :default => 0
     add_column :users, :last_seen_at, :datetime
+    add_column :users, :forum_admin, :boolean, :default => false
   end
 
   def self.down

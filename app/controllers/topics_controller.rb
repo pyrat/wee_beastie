@@ -84,7 +84,7 @@ class TopicsController < ApplicationController
 
   def destroy
     @topic.destroy
-    flash[:notice] = "Topic '{title}' was deleted."[:topic_deleted_message, @topic.title]
+    flash[:notice] = "Topic #{@topic.title} was deleted."
     respond_to do |format|
       format.html { redirect_to forum_path(@forum) }
       format.xml  { head 200 }

@@ -103,7 +103,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    flash[:notice] = "Post of '{title}' was deleted."[:post_deleted_message, @post.topic.title]
+    flash[:notice] = "Post of '#{@post.topic.title}' was deleted."
     respond_to do |format|
       format.html do
         redirect_to(@post.topic.frozen? ?

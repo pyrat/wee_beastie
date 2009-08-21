@@ -9,5 +9,10 @@ namespace :wee_beastie do
   task :sync_public do
     system "rsync -ruv vendor/plugins/wee_beastie/public/ public"
   end
+  
+  desc "install plugins"
+  task :install_plugins do
+    system "rsync -ruv vendor/plugins/wee_beastie/vendor/plugins/ vendor/plugins"
+  end
 
 end

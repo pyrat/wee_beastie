@@ -6,12 +6,17 @@ Rewrite of SavageBeast to work with Rails 2.3.x as a rails engine.
 
 h2. Install
 
-* script/plugin install
+* script/plugin install git://github.com/pyrat/wee_beastie.git
 * rake wee_beastie:sync_migrations
 * rake wee_beastie:sync_public
 * rake db:migrate
 * config.cache_classes = true (environment.rb) - means restarts, sorry!
 * config.active_record.default_timezone = :utc
+* setup a user to have forum_admin attribute set to true to allow you to administer and setup the forums.
+
+h2. TODO
+
+* Currently there is no out of the box way to create moderatorships. You need to add the create moderatorship links in your you administration.
 
 
 

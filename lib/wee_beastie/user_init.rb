@@ -14,14 +14,14 @@ module WeeBeastie
         has_many :monitorships
         has_many :monitored_topics, :through => :monitorships, :conditions => ["#{Monitorship.table_name}.active = ?", true], :order => "#{Topic.table_name}.replied_at desc", :source => :topic
 
-        #i mplement in your user model
+        # implement in your user model (default below)
         def display_name
           self.login
         end
 
-        #implement in your user model
+        # implement in your user model (default below)
         def admin?
-          true
+          self.forum_admin?
         end
 
         def moderator_of?(forum)
