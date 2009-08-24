@@ -5,9 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title><%= "#{h @page_title} - " if @page_title %> FORUMS</title>
   <%= stylesheet_link_tag 'wee_beastie/display' %>
+  <%= javascript_include_tag "prototype", "effects" %>
   <%= javascript_include_tag "wee_beastie/lowpro", "wee_beastie/application", :cache => 'wee_beastie'%>
 
-	<%= javascript_include_tag "prototype", "effects" %>
 <% unless @feed_icons.blank? -%>
   <% @feed_icons.each do |feed| -%>
   <%# auto_discovery_link_tag :rss, feed[:url], :title => "Subscribe to '#{feed[:title]}'" %>
