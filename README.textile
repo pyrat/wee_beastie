@@ -18,7 +18,15 @@ h2. Install
 
 h2. TODO
 
-* Currently there is no out of the box way to create moderatorships. You need to add the create moderatorship links in your you administration.
+* Currently there is no out of the box way to create moderatorships. You need to add the create moderatorship links in your user administraion.
+
+h2. Notes
+
+* Wee Beastie plays best with the Resful Authentication plugin but any authentication can be used if the *current_user* and *logged_in?* methods are implemented.
+
+* This is still rough around the edges for please fork and submit your improvements upstream so we can make beast work as a rails engine.
+
+* Future direction: once rails 3 is released it may be worth researching how hard it would be to make this a mountable application rather than a rails engine.
 
 
 
