@@ -13,7 +13,7 @@ h2. Install
 * rake db:migrate
 * config.active_record.default_timezone = :utc
 * include WeeBeastie::UserInit into your user model
-* setup a user to have forum_admin attribute set to true to allow you to administer and setup the forums.
+* setup the user.forum_admin attribute to true to allow you to administer and setup the forums.
 
 h2. TODO
 
