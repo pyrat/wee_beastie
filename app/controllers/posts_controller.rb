@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  unloadable
+  
   before_filter :find_post,      :except => [:index, :create, :monitored, :search]
   before_filter :login_required, :except => [:index, :monitored, :search, :show]
   @@query_options = { :select => "#{Post.table_name}.*, #{Topic.table_name}.title as topic_title, #{Forum.table_name}.name as forum_name", :joins => "inner join #{Topic.table_name} on #{Post.table_name}.topic_id = #{Topic.table_name}.id inner join #{Forum.table_name} on #{Topic.table_name}.forum_id = #{Forum.table_name}.id" }

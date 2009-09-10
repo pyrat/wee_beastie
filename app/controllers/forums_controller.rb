@@ -1,4 +1,7 @@
 class ForumsController < ApplicationController
+  
+  unloadable
+  
   before_filter :login_required, :except => [:index, :show]
   before_filter :find_or_initialize_forum, :except => :index
   before_filter :admin?, :except => [:show, :index]

@@ -1,4 +1,7 @@
 class MonitorshipsController < ApplicationController
+  
+  unloadable
+  
   before_filter :login_required
   helper :beastie
   layout 'forums'
