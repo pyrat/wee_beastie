@@ -11,7 +11,6 @@ h2. Install
 * rake wee_beastie:sync_public
 * rake wee_beastie:install_plugins
 * rake db:migrate
-* config.cache_classes = true (environment.rb) - means restarts, sorry!
 * config.active_record.default_timezone = :utc
 * include WeeBeastie::UserInit into your user model
 * setup a user to have forum_admin attribute set to true to allow you to administer and setup the forums.
