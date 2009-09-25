@@ -14,5 +14,12 @@ namespace :wee_beastie do
   task :install_plugins do
     system "rsync -ruv vendor/plugins/wee_beastie/vendor/plugins/ vendor/plugins"
   end
+  
+  desc "install task"
+  task :install do
+    sync_migrations
+    sync_public
+    install_plugins
+  end
 
 end

@@ -7,9 +7,7 @@ Rewrite of SavageBeast to work with Rails 2.3.x as a rails engine.
 h2. Install
 
 * script/plugin install git://github.com/pyrat/wee_beastie.git
-* rake wee_beastie:sync_migrations
-* rake wee_beastie:sync_public
-* rake wee_beastie:install_plugins
+* rake wee_beastie:install
 * rake db:migrate
 * config.active_record.default_timezone = :utc
 * include WeeBeastie::UserInit into your user model
@@ -21,7 +19,9 @@ h2. TODO
 
 h2. Notes
 
-* Wee Beastie plays best with the Resful Authentication plugin but any authentication can be used if the *current_user* and *logged_in?* methods are implemented.
+* You need to have rsync installed for the install process.
+
+* Wee Beastie plays best with the Resful Authentication plugin but any authentication can be used if the *current_user* and *logged_in?* methods are implemented. It has also been successfully integrated with clearance.
 
 * This is still rough around the edges for please fork and submit your improvements upstream so we can make beast work as a rails engine.
 
