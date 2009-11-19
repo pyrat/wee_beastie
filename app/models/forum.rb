@@ -3,10 +3,10 @@ class Forum < ActiveRecord::Base
 
   validates_presence_of :name
 
-  has_many :moderatorships, :dependent => :delete_all
+  has_many :moderatorships, :dependent => :destroy
   has_many :moderators, :through => :moderatorships, :source => :user
 
-  has_many :topics, :order => 'sticky desc, replied_at desc', :dependent => :delete_all
+  has_many :topics, :order => 'sticky desc, replied_at desc', :dependent => :destroy
   has_one  :recent_topic, :class_name => 'Topic', :order => 'sticky desc, replied_at desc'
 
   # this is used to see if a forum is "fresh"... we can't use topics because it puts

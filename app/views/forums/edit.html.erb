@@ -10,3 +10,8 @@
 <%= render :partial => "form", :object => f %>
 <%= submit_tag 'Save Forum' -%> or <%= link_to('Cancel', forums_path) %>
 <% end -%>
+
+
+<p>
+  <%= link_to "Delete this Forum", forum_path(@forum), :method => :delete, :confirm => 'Are you sure you want to delete this forum, topics and posts?' %> 
+</p>

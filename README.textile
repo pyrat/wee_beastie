@@ -9,7 +9,14 @@ h2. Install
 * script/plugin install git://github.com/pyrat/wee_beastie.git
 * rake wee_beastie:install
 * rake db:migrate
+
+Add the following 2 lines to environment.rb
+
 * config.active_record.default_timezone = :utc
+* config.reload_plugins = true
+
+Code specific
+
 * include WeeBeastie::UserInit into your user model
 * setup the user.forum_admin attribute to true to allow you to administer and setup the forums.
 
